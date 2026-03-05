@@ -6,7 +6,8 @@ import org.springframework.web.bind.annotation.RestController;
 import top.mqxu.hello.vo.ResultVO;
 
 /**
- * Hello接口控制器
+ * Hello 接口控制器
+ *
  * @author moqi
  */
 @RestController
@@ -15,10 +16,11 @@ public class HelloController {
 
     /**
      * 欢迎接口
+     *
      * @return 统一格式的响应结果
      */
     @GetMapping("/hello")
     public ResultVO<String> hello() {
-        return new ResultVO<>("Hello Spring Boot 555");
+        return ResultVO.success("Hello Spring Boot");
     }
 }
